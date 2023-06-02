@@ -153,5 +153,54 @@ window.addEventListener('scroll', () => {
 });
 
 // ------------------------------------------
+// Form Event
+const inputName = document.querySelector('input[type="text"]');
+const select = document.querySelector('select');
+const form = document.querySelector('form');
+// Stocker ce qui est taper dans l'Input
+let pseudo = "";
+let language = "";
+
+inputName.addEventListener('input', (e) => {
+    pseudo = e.target.value;
+    console.log(pseudo);
+})
+
+select.addEventListener('input', (e) => {
+    language = e.target.value;
+});
+
+// Pour ne pas changer de page aprés avoir cliquer sur submit
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // JS connait l'id cgv
+   
+    if (cgv.checked) {
+        document.querySelector('form > div').innerHTML = `
+        <h3> Pseudo : ${pseudo} </h3>
+        <h4> Langage préféré : ${language}
+        `
+    } else {
+        alert("Veuillez accepter les CGV")
+    }
+});
 
 
+// Evenement Load event. Il se déclenche une fois que toutes la page est chargée
+
+window.addEventListener('load', () => {
+    console.log('Doc chargé !');
+});
+
+// -----------------------------------------
+
+//
+const boxes = document.querySelectorAll('.box');
+
+console.log(boxes);
+
+boxes.forEach((box) => {
+  box.addEventListener('click', (e) => {
+e.target.style.transform = "scale(0.7)";
+  });
+});
