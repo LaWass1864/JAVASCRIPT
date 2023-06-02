@@ -204,3 +204,15 @@ boxes.forEach((box) => {
 e.target.style.transform = "scale(0.7)";
   });
 });
+
+// Selectionner par ID, on peut déclarer l'ID par getElementbyId 
+
+// addEventListener VS onClick
+
+document.body.onclick = function() {
+    console.log('Coucou');
+}
+
+document.body.onscroll = () => {
+    alert('ca marche!')
+}
