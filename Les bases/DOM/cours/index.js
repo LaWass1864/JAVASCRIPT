@@ -265,3 +265,77 @@ btn2.addEventListener('click', () => {
   questionContainer.innerHTML += "<h3> Bravo " + answer + "</h3>";
 })
 
+// setimeout : tp en millisecondes avant de déclencher, c'est un timer
+
+setTimeout(() => {
+  questionContainer.style.background = "red";
+}, 4000);
+
+// Execute un bout de code toutes les temps de secondes
+// let interval = setInterval(() => {
+//   document.body.innerHTML += 
+//   "<div class='box'><h2>Nouvelle boite !</h2></div>"
+//   success();
+// }, 3000);
+
+// Quand on clique sur le body, on arrete la methode
+document.body.addEventListener('click', (e) => {
+  clearInterval(interval);
+ console.log(e.target)
+})
+
+// Location = pour rediriger vers des liens
+// console.log(location.href);
+// console.log(location.host);
+// console.log(location.location.pathname);
+// console.log(location.search);
+
+// location.replace("https://lequipe.fr");
+
+// window.onload = () => {
+//   location.href = "http://twitter.fr";
+// }
+
+// Objet Navigator
+
+console.log(navigator.userAgent)
+
+// Il peut aussi nous localiser
+// https://developer.mozilla.org/fr/docs/Web/API/Geolocation/getCurrentPosition
+
+var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) {
+  var crd = pos.coords;
+
+  document.body.innerHTML += ('Votre position actuelle est :');
+  document.body.innerHTML += (`Latitude : ${crd.latitude}`);
+  document.body.innerHTML += (`Longitude : ${crd.longitude}`);
+  document.body.innerHTML += (`La précision est de ${crd.accuracy} mètres.`);
+}
+
+function error(err) {
+  console.warn(`ERREUR (${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+
+
+//HIstory
+// window.history.back();
+//history.go(-3);
+
+
+let prenom = setInterval(() => {
+  document.body.innerHTML += `<h3>Wassila</h3>`
+}, 3000);
+
+
+
+document.body.addEventListener('click', () => {
+  clearInterval(prenom);
+})
