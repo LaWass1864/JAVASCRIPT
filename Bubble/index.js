@@ -41,6 +41,6 @@ const bubblemaker = () => {
  
 };
 
-setInterval(bubblemaker, 900);
+setInterval(bubblemaker, 1000);
 
 // Suppression des bulles
