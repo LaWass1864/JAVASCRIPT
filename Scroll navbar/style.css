@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(https://images.pexels.com/photos/4451507/pexels-photo-4451507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+    center/cover;
+  height: 300vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav {
+  background-color: rgb(156, 136, 136);
+ position: fixed;
+ width: 100%;
+ top: 0;
+ transition:0.2s;
+
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+li {
+  list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+}
