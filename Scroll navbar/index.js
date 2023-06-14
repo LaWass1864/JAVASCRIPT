@@ -1,5 +1,5 @@
 const nav = document.querySelector("nav");
-// on stock une variable avec le let
+// on stock la valeur du précedent niveau de scroll pour savoir si on est monté ou descendu
 let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
@@ -8,6 +8,6 @@ window.addEventListener("scroll", () => {
   } else {
     nav.style.top = "-50px";
   }
-//   le lastscroll = la valeur du scroll
+//   Niveau de scroll
   lastScroll = window.scrollY;
 });
