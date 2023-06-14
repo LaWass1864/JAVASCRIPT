@@ -23,7 +23,7 @@ nav {
   position: fixed;
   z-index: 1000;
   height: 90px;
-  transition: 0.2s ease;
+  transition: 0.1s ease;
 }
 .nav-elements {
   display: flex;
@@ -96,8 +96,10 @@ p::first-letter {
   padding: 2rem;
   opacity: 0;
   transform: translateX(-200px);
-  transition: 1s ease-in;
+  transition: 1.5s ease-in;
 }
+
+
 .overcome {
   padding: 2rem;
   background: rgba(52, 187, 255, 0.287);
