@@ -31,6 +31,30 @@ p {
   transition: 0.5s ease-out;
   z-index: 4;
 }
+/* regle css de priorité */
+#side-bar.is-closed {
+  left: 0;
+}
+
+.is-closed span {
+  position: absolute;
+}
+
+.is-closed span:nth-child(1) {
+  transform: rotate(-45deg);
+}
+.is-closed span:nth-child(2) {
+  opacity:0;
+}
+.is-closed span:nth-child(3) {
+  transform: rotate(45deg);
+}
+
+
+/* Assombrir le content */
+.is-closed ~ .content {
+  opacity: 0.3;
+}
 .toggle-btn {
   position: absolute;
   top: 30px;
@@ -39,6 +63,7 @@ p {
   height: 50px;
   width: 50px;
 }
+
 .toggle-btn span {
   width: 60px;
   height: 10px;
@@ -48,6 +73,7 @@ p {
   margin-top: 4px;
   transition: 0.3s ease;
 }
+
 li {
   color: #292929;
   list-style: none;

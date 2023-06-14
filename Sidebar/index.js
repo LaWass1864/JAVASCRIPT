@@ -1,10 +1,15 @@
-const sideBar = document.getElementById("side-bar")
+let toggleBtn = document.querySelector(".toggle-btn");
+const content = document.querySelector(".content");
 
-const toggleButton = document.querySelector(".toggle-btn")
-console.log(toggleButton)
+let sideBar = document.getElementById("side-bar");
 
-toggleButton.addEventListener('click', () => {
-  sideBar.style.left = "0px";
+toggleBtn.addEventListener("click", () => {
+  sideBar.classList.toggle("is-closed");
+});
 
-})
+// Priorité en css ! !important > id > class > baliseHtml
+
+content.addEventListener("click", () => {
+  sideBar.classList.remove("is-closed");
+});
 
