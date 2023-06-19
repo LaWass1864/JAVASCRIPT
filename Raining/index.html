@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Raining</title>
     <!-- Lien vers fichier style.css -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Lien vers fichier js -->
+    <link rel="stylesheet" href="./assets/style/index.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Discover</a></li>
+        <li><a href="">Team</a></li>
+      </ul>
+    </nav>
+
+    <div class="pop-up" id="popup">
+      <div class="pop-up-container">
+        <h3>Don't miss out !<br />Suscribe to our newsletter</h3>
+        <div class="button-container">
+          <input type="email" placeholder="please enter you email">
+          <button>Submit</button>
+        </div>
+        <i class="far fa-times-circle" id="closeBtn"></i>
+      </div>
+    </div>
+    
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
