@@ -3,6 +3,7 @@
 // const baliseHTML = document.querySelector("h4");
 
 // Click event
+/* Ces lignes de code sélectionnent des éléments du document HTML en utilisant différentes méthodes : */
 const questionContainer = document.querySelector(".click-event");
 const btn1 = document.querySelector("#btn-1");
 const btn2 = document.getElementById("btn-2");
@@ -28,6 +29,12 @@ btn2.addEventListener("click", () => {
 // Mouse Events
 const mousemove = document.querySelector(".mousemove");
 
+/* Ce code ajoute un écouteur d'événement à l'objet window pour l'événement "mousemove". Lorsque la
+souris est déplacée, la fonction de rappel est exécutée. À l'intérieur de la fonction de rappel, la
+position de la souris est obtenue à l'aide des propriétés `pageX` et `pageY` de l'objet événement
+(`e`). Les propriétés CSS `left` et `top` de l'élément `mousemove` sont ensuite définies sur les
+valeurs respectives de `e.pageX` et `e.pageY`, déplaçant efficacement l'élément avec le curseur de
+la souris. */
 window.addEventListener("mousemove", (e) => {
   mousemove.style.left = e.pageX + "px";
   mousemove.style.top = e.pageY + "px";
@@ -117,7 +124,7 @@ form.addEventListener("submit", (e) => {
       <h4>Langage préféré : ${language}</h4>
     `;
   } else {
-    alert("Veuillez accepter les CGV");
+    alert("Veuillez accepter les CGV, svp");
   }
 });
 
@@ -128,6 +135,10 @@ window.addEventListener("load", () => {
 });
 
 //------------------------------------------------
+/* Ce code sélectionne tous les éléments avec la classe "box" à l'aide de la méthode `querySelectorAll`
+et les stocke dans la variable `boxes`. Ensuite, il utilise la méthode « forEach » pour parcourir
+chaque élément de la boîte. Pour chaque boîte, il ajoute un écouteur d'événement de clic qui
+redimensionne l'élément de boîte à 70 % de sa taille d'origine lorsque vous cliquez dessus. */
 // ForEach
 // const boxes = document.getElementsByClassName("box");
 const boxes = document.querySelectorAll(".box");
